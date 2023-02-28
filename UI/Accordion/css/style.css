@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #C9D6DF;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #52616B;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper__inner {
+  padding: 0 15px;
+}
+
+.accordion__list {
+  max-width: 600px;
+}
+.accordion__btn {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+  text-align: left;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.accordion ._opacity {
+  opacity: 0.8;
+}
+.accordion ._opacity:hover {
+  opacity: 1;
+}
+.accordion__btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 20px;
+  height: 20px;
+  background-image: url("../icons/up.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.accordion__btn._open::after {
+  transform: scale(1) translate(-50%, -50%);
+}
+.accordion ._open {
+  transform: scale(1.02);
+}
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.accordion__text {
+  padding: 10px;
+  color: #1E2022;
+}/*# sourceMappingURL=style.css.map */
