@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <link rel="stylesheet" href="css/style.css">
    <title>Sidebar</title>
 </head>
+
 <body>
 
+   <aside class="sidebar">
+      <button class="sidebar__button">
+         <i class='bx bx-chevron-right sidebar__btn'></i>
+      </button>
+      <div class="sidebar__inner">
+         <div class="sidebar__logo logo">
+            <a class="logo__link" href="#">
+               <i class='bx bxs-bullseye logo__icon'></i>
+            </a>
+         </div>
+         <nav class="sidebar__nav nav">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bxs-info-circle link__icon'></i>
+                     <span class="link__text">About</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bxs-briefcase link__icon'></i>
+                     <span class="link__text">Services</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bx-list-check link__icon'></i>
+                     <span class="link__text">Projects</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bx-body link__icon'></i>
+                     <span class="link__text">Our team</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bx-question-mark link__icon'></i>
+                     <span class="link__text">FAQ</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bxl-twitter link__icon'></i>
+                     <span class="link__text">Social</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link link" href="#">
+                     <i class='bx bxs-contact link__icon'></i>
+                     <span class="link__text">Contacts</span>
+                  </a>
+               </li>
+            </ul>
+            <div class="nav__feedback feedback">
+               <ul class="feedback__list">
+                  <li class="feedback__item">
+                     <a class="feedback__link link" href="tel:88000000000">
+                        <i class='bx bxs-phone link__icon'></i>
+                        <span class="link__text">8 (800) 000-00-00</span>
+                     </a>
+                  </li>
+                  <li class="feedback__item">
+                     <a class="feedback__link link" href="mailto:mail@mail.com">
+                        <i class='bx bxs-envelope link__icon'></i>
+                        <span class="link__text">mail@mail.com</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </aside>
    
+   <script src="js/sidebar.js"></script>
 
 </body>
+
 </html>
