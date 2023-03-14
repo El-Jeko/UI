@@ -1,0 +1,246 @@
+$black: #303030;
+$dark_grey: #52616B;
+$light__grey: #C9D6DF;
+$light: #F0F5F9;
+$white: #fff;
+$btn_font_color: #e2e9ed;
+
+* {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   font-size: 16px;
+   color: $black;
+   background-color: $light;
+}
+
+.container {
+   max-width: 1190px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   font-size: inherit;
+   color: inherit;
+   text-decoration: none;
+}
+
+button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   font-weight: 600;
+   color: $black;
+   background-color: $light;
+   border: none;
+   border-radius: 6px;
+   outline: none;
+   cursor: pointer;
+}
+
+/**************BURGER**************/
+
+.burger {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   width: 36px;
+   height: 36px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: $light;
+   border-radius: 50%;
+   box-shadow: 0 8px 24px rgb(48, 48, 48, .25);
+   transition: opacity .3s ease .8s, visibility .3s ease .8s, transform .4s ease .8s;
+   z-index: 9998;
+
+   @media (min-width: 1440px) {
+      display: none;
+   }
+
+   &_clicked {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(.8);
+      transition: opacity .3s ease, visibility .3s ease, transform .4s ease;
+   }
+
+   &__icon {
+      font-size: 30px;
+   }
+}
+
+/**************CLOSE-BUTTON**************/
+
+.close {
+   position: absolute;
+   background-color: $light;
+   border-radius: 50%;
+   box-shadow: 0 8px 24px rgb(48, 48, 48, .25);
+
+   &__icon {
+      font-size: 26px;
+   }
+}
+
+/**************TOGGLE-BUTTON**************/
+
+.toggle {
+   position: absolute;
+   background-color: $light;
+   border-radius: 50%;
+   box-shadow: 0 8px 24px rgb(48, 48, 48, .25);
+
+   &__icon {
+      font-size: 26px;
+   }
+}
+
+._rotate {
+   transform: rotate(180deg);
+}
+
+/**************HEADER**************/
+
+.header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 260px;
+   height: 100%;
+   background-color: $light;
+   box-shadow: 0 8px 24px rgb(48, 48, 48, .25);
+   transform: translateX(100%);
+   transition: transform .7s ease;
+   z-index: 9999;
+
+   @media (min-width: 1440px) {
+      left: 0;
+      width: 90px;
+      transform: translateX(0);
+      transition: width .7s ease;
+
+      &_width {
+         width: 260px;
+      }
+   }
+
+   &_slide {
+      transform: translateX(0);
+      transition: transform .7s ease .6s;
+   }
+
+   &__close-btn {
+      top: 37px;
+      right: 20px;
+
+      @media (min-width: 1440px) {
+         display: none;
+      }
+   }
+
+   &__toggle-btn {
+      display: none;
+
+      @media (min-width: 1440px) {
+         display: flex;
+         top: 37px;
+         right: -15px;
+      }
+   }
+
+   &__toggle-icon {
+      @media (min-width: 1440px) {
+         transition: transform .4s ease;
+      }
+   }
+
+   &__inner {
+      padding: 20px 0;
+   }
+
+   &__logo {
+      margin-bottom: 40px;
+   }
+}
+
+.logo {
+   &__link {
+      display: inline-block;
+   }
+
+   &__icon {
+      font-size: 60px;
+   }
+}
+
+.nav {
+   &__list {
+      margin-bottom: 40px;
+   }
+
+   &__link {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+   }
+}
+
+.link {
+   border-radius: 6px;
+   overflow-x: hidden;
+
+   @media (min-width: 1024px) {
+      transition: color .2s ease, background-color .2s ease, transform .2s ease;
+
+      &:hover {
+         color: $light;
+         background-color: $black;
+         transform: scale(1.015);
+      }
+   }
+
+   &__icon {
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+   }
+
+   &__text {
+      white-space: nowrap;
+
+      @media (min-width: 1440px) {
+         opacity: 0;
+         visibility: hidden;
+         transition: opacity .2s ease .5s, visibility .2s ease .5s;
+
+         &_opacity {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s ease, visibility .3s ease;
+         }
+      }
+   }
+}
+
+.feedback {
+   &__link {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+   }
+}
